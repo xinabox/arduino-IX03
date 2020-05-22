@@ -1,5 +1,5 @@
 {
     "board": "arduino:samd:arduino_zero_native",
-    "port": "COM7",
+    "port": "COM8",
     "sketch": "examples\\test\\test.ino"
 }

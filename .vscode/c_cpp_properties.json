@@ -3,6 +3,8 @@
         {
             "name": "Win32",
             "includePath": [
+                "C:\\Users\\Luqmaan\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\**",
+                "C:\\Users\\Luqmaan\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\1.0.4\\**",
                 "C:\\Users\\Luqmaan\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\**",
                 "C:\\Users\\Luqmaan\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\samd\\1.8.6\\**"
             ],
