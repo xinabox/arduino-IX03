@@ -84,6 +84,10 @@ public:
     // setTimeout();
     // serialEvent();
 
+    void pinMode(uint8_t pin, uint8_t mode);
+    void digitalWrite(uint8_t pin, uint8_t state);
+    bool digitalRead(uint8_t pin);
+
     void write(uint8_t);
     void write(const char *str);
     void write(const uint8_t *buffer, uint8_t size);

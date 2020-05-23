@@ -4,15 +4,14 @@
 xIX03 IX03;
 
 //#define Serial IX03
-#define Serial SerialUSB
+//#define Serial SerialUSB
 
 void setup()
 {
-    Serial.begin(9600);
-    Serial1.begin(9600);
+    Serial.begin(57600);
+    //Serial1.begin(54000);
     Wire.begin();
-    while (!SerialUSB);
-    IX03.begin(9600);
+    IX03.begin(57600);
 }
 
 void loop()
@@ -20,12 +19,12 @@ void loop()
     char c[20] = {NULL};
     int k = 0;
     String h = "This is test number 1\nThis is test number 2\nThis is test number 3";
-    Serial1.print(h);
-    while (Serial1.available() > 0)
+    Serial.print(h);
+    while (Serial.available() > 0)
     {
-        c[k] = Serial1.read();
+        c[k] = Serial.read();
         k++;
     }
-    Serial.println(strtod(c, NULL), 6);
+    Serial.println(h);
     delay(1000);
 }

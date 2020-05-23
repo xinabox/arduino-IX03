@@ -8,9 +8,7 @@
                 "C:\\Users\\Luqmaan\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\**",
                 "C:\\Users\\Luqmaan\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\samd\\1.8.6\\**"
             ],
-            "forcedInclude": [
-                "C:\\Users\\Luqmaan\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\samd\\1.8.6\\cores\\arduino\\Arduino.h"
-            ],
+            "forcedInclude": [],
             "intelliSenseMode": "msvc-x64"
         }
     ],

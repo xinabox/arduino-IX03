@@ -320,7 +320,32 @@ uint8_t xIX03::read()
 
 void xIX03::end()
 {
-    
+}
+
+void xIX03::pinMode(uint8_t pin, uint8_t mode)
+{
+    uint8_t _reg = readByte(SC16IS740_IODIR);
+    if (mode == OUTPUT) {
+        _reg |= 1 << pin;
+    } else {
+        _reg &= ~(1 << pin);
+    }
+    writeByte(SC16IS740_IODIR, _reg);
+}
+void xIX03::digitalWrite(uint8_t pin, uint8_t state)
+{
+    uint8_t _reg = readByte(SC16IS740_IOSTATE);
+    if (state == HIGH) {
+        _reg |= 1 << pin;
+    } else {
+        _reg &= ~(1 << pin);
+    }
+    writeByte(SC16IS740_IOSTATE, _reg);
+}
+bool xIX03::digitalRead(uint8_t pin)
+{
+    uint8_t _reg = readByte(SC16IS740_IOSTATE);
+    return (_reg&pin)>>pin;
 }
 void xIX03::writeByte(uint8_t reg, uint8_t val)
 {

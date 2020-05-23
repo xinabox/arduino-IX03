@@ -1,5 +1,6 @@
 {
-    "board": "arduino:samd:arduino_zero_native",
-    "port": "COM8",
-    "sketch": "examples\\test\\test.ino"
+    "board": "esp32:esp32:cw02",
+    "port": "COM9",
+    "sketch": "examples\\test\\test.ino",
+    "configuration": "FlashMode=qio,FlashFreq=80,FlashSize=4M,UploadSpeed=921600,DebugLevel=none"
 }
