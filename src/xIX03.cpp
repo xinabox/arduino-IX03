@@ -335,6 +335,7 @@ void xIX03::pinMode(uint8_t pin, uint8_t mode)
 void xIX03::digitalWrite(uint8_t pin, uint8_t state)
 {
     uint8_t _reg = readByte(SC16IS740_IOSTATE);
+    //SerialUSB.println(_reg);
     if (state == HIGH) {
         _reg |= 1 << pin;
     } else {
@@ -353,7 +354,6 @@ void xIX03::writeByte(uint8_t reg, uint8_t val)
     Wire.write(reg << 3);
     Wire.write(val);
     Wire.endTransmission();
-    delay(100);
 }
 
 uint8_t xIX03::readByte(uint8_t reg)
@@ -374,5 +374,4 @@ void xIX03::writeBlock(uint8_t reg, uint8_t *val, uint8_t len)
         Wire.write(val[i]);
     }
     Wire.endTransmission();
-    delay(100);
 }
